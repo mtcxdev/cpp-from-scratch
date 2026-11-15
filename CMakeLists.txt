@@ -12,5 +12,5 @@ target_compile_options(cxx PRIVATE
 
 include(CTest)
 if(BUILD_TESTING)
-  add_test(NAME smoke_hello COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/tests/smoke.sh $<TARGET_FILE:cxx> ${CMAKE_CURRENT_SOURCE_DIR}/examples/hello.cpp)
+  add_test(NAME smoke_hello COMMAND sh ${CMAKE_CURRENT_SOURCE_DIR}/tests/smoke.sh $<TARGET_FILE:cxx> ${CMAKE_CURRENT_SOURCE_DIR}/examples/hello.cpp)
 endif()
